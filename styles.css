@@ -6,6 +6,7 @@
 }
 
 .topbar a:not(#git) {
+  font-family: "Times New Roman", Times, serif;
   float: left;
   color: #f2f2ff;
   text-align: center;
@@ -42,6 +43,7 @@ box-shadow: 1px 11px 18px 13px rgba(0,0,0,0.59);
 }
 
 #title {
+	font-family: "Times New Roman", Times, serif;
 	font-size: 50px;
 	letter-spacing: 1px;
 	word-spacing: 2px;
@@ -56,6 +58,7 @@ box-shadow: 1px 11px 18px 13px rgba(0,0,0,0.59);
 }
 
 p {
+	font-family: "Times New Roman", Times, serif;
 	font-size: 25px;
 	letter-spacing: 1px;
 	word-spacing: 2px;
@@ -63,6 +66,5 @@ p {
 	font-weight: 400;
 	font-style: normal;
 	float: center;
-	margin-left: 625px;
-	margin-top: 45px;
+	margin-left: 50px;
 }
