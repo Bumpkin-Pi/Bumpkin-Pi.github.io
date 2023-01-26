@@ -7,6 +7,7 @@ async function main(){
 	   .then( t => {
 	   	info = JSON.parse(t)
 	   })
+	console.log(info)
 	// console.log(info)
 	for (repo in info){
 		if (!info[repo].archived && info[repo].name != "Bumpkin-Pi" && info[repo].name != "Bumpkin-Pi.github.io"){
