@@ -114,7 +114,10 @@ p {
 	font-variant: small-caps;
 	text-transform: none;
 	float: center;
-	margin: 25px;
+	margin: 20px;
+	margin-bottom: px;
+	margin-left: 25px;
+
 }
 
 .repo h2 {
