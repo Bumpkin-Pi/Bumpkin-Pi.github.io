@@ -10,14 +10,20 @@ async function main(){
 	// console.log(info)
 	for (repo in info){
 		if (!info[repo].archived && info[repo].name != "Bumpkin-Pi" && info[repo].name != "Bumpkin-Pi.github.io"){
-			// console.log(info[repo])
-			let html = await fetch(info[repo].html_url)
+			// console.log(info[repo].html_url)
+			let html = await fetch(info[repo].html_url, {
+				mode: "no-cors",
+				method: "post",
+				headers: {
+					// "Access-Control-Allow-Origin": "https://holly.ddns.net/"
+				}
+			})
 			   .then( r => r.text() )
 			   .then( t => {
 			   	return t;
 			})
 			let image = html.slice(html.lastIndexOf("<meta property=\"og:image\" content=\"")).split("\" />")[0].split("content=\"")[1]
-			// console.log(image)
+			console.log(html + " ----")
 			// <meta property="og:image" content="https://avatars.githubusercontent.com/u/74017165?s=400&amp;v=4">
 			console.log(info[repo])
 			let repo_div = document.createElement("div")
