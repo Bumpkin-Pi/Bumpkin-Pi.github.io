@@ -16,8 +16,10 @@ async function main(){
 	for (repo in info){
 		if (!info[repo].archived && info[repo].name != "Bumpkin-Pi" && info[repo].name != "Bumpkin-Pi.github.io"){
 			// console.log(info[repo])
-			console.log(info[repo])
-			let html = await fetch(info[repo].html_url, {
+			console.log(info[repo].html_url)
+			console.log(info[repo].name)
+			console.log("https://github.com/Bumpkin-Pi/"+info[repo].name)
+			let html = await fetch("https://github.com/Bumpkin-Pi/"+info[repo].name, {
 				mode: "no-cors",
 				method: "get",
 				headers: {
