@@ -5,9 +5,10 @@ async function main(){
 	await fetch(url)
 	   .then( r => r.text() )
 	   .then( t => {
+	   	console.log("Repos list: ")
 	   	info = JSON.parse(t)
+		console.log(info)
 	   })
-	console.log(info)
 	// console.log(info)
 	for (repo in info){
 		if (!info[repo].archived && info[repo].name != "Bumpkin-Pi" && info[repo].name != "Bumpkin-Pi.github.io"){
