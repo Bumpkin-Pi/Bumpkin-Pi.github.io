@@ -39,6 +39,9 @@ box-shadow: 1px 11px 18px 13px rgba(0,0,0,0.59);
 	margin: 50px;
 	float: left;
 }
+.images:hover{
+	box-shadow: 10px 10px 14px 2px #333;
+}
 
 #title {
 	font-family: "Times New Roman", Times, serif;
@@ -130,4 +133,19 @@ p {
 	font-style: normal;
 	float: center;
 	margin-left: 30px;
+}
+
+
+#hyfetch{
+	float: left;
+	width: 800px; 
+	height: 460px; 
+	overflow: hidden;
+	box-shadow: 4px 4px 14px 2px #333;
+	margin: 50px;
+	float: left;
+}
+
+#hyfetch:hover{
+	box-shadow: 10px 10px 14px 2px #333;
 }
