@@ -22,6 +22,7 @@ async function main(){
 			   .then( t => {
 			   	return t;
 			})
+			console.log(html)
 			let image = html.slice(html.lastIndexOf("<meta property=\"og:image\" content=\"")).split("\" />")[0].split("content=\"")[1]
 			console.log(image)
 			let repo_div = document.createElement("div")
