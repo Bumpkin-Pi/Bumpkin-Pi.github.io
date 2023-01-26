@@ -2,7 +2,10 @@ const url = "https://api.github.com/users/Bumpkin-Pi/repos"
 async function main(){
 	let info;
 	let shown_repos = []
-	await fetch(url)
+	await fetch(url, {
+		mode: "no-cors",
+		method: "get",
+	})
 	   .then( r => r.text() )
 	   .then( t => {
 	   	console.log("Repos list: ")
