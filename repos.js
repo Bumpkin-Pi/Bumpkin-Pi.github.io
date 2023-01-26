@@ -23,6 +23,7 @@ async function main(){
 			   	return t;
 			})
 			let image = html.slice(html.lastIndexOf("<meta property=\"og:image\" content=\"")).split("\" />")[0].split("content=\"")[1]
+			console.log(image)
 			let repo_div = document.createElement("div")
 			repo_div.innerHTML = `
 			<a href="${info[repo].html_url}">
