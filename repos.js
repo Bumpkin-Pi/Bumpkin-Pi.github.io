@@ -2,24 +2,15 @@ const url = "https://api.github.com/users/Bumpkin-Pi/repos"
 async function main(){
 	let info;
 	let shown_repos = []
-	await fetch(url, {
-		mode: "no-cors",
-		method: "get",
-	})
-	   .then( r => r.text() )
-	   .then( t => {
-	   	console.log("Repos list: ")
-	   	info = JSON.parse(t)
-		console.log(info)
-	   })
+	let raw = await fetch(url).then( r => r.text()).then( t => { return t})
+	console.log(raw)
+	info = JSON.parse(raw)
 	// console.log(info)
 	for (repo in info){
 		if (!info[repo].archived && info[repo].name != "Bumpkin-Pi" && info[repo].name != "Bumpkin-Pi.github.io"){
 			// console.log(info[repo])
 			console.log(info[repo].html_url)
-			console.log(info[repo].name)
-			console.log("https://github.com/Bumpkin-Pi/"+info[repo].name)
-			let html = await fetch("https://github.com/Bumpkin-Pi/"+info[repo].name, {
+			let html = await fetch(info[repo].html_url, {
 				mode: "no-cors",
 				method: "get",
 				headers: {
