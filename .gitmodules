@@ -4,3 +4,6 @@
 [submodule "typingSpeedTest"]
 	path = typingSpeedTest
 	url = https://github.com/Bumpkin-Pi/typingSpeedTest
+[submodule "BinaryPhone"]
+	path = BinaryPhone
+	url = https://github.com/Bumpkin-Pi/BinaryPhone.git
