@@ -1,33 +1,45 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta name="description" content="Holly's website.">
-<meta name="keywords" content="Programming, Coding, CV">
-<meta name="author" content="Holly">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:image" content="http://holly.ddns.net/images/favicon.ico">
-<title>Holly</title>
-<link rel="shortcut icon" type="image/jpg" href="./images/favicon.ico"/>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body style="background: #444 no-repeat scroll 0 0;">
-<div class="topbar">
-  <a class="active" href="./index.html">Home</a>
-  <a href="./repos.html">Repos</a>
-  <!-- <a href="./resume.html">Résumé</a> -->
-  <a href="./misc.html">Miscellaneous</a>
-  <a id="git" href="https://github.com/Bumpkin-Pi/"><img src="./images/github-icon.jpg"></a>
-</div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>;)</title>
+    <style>
+        :root {
+            --rosewater: #f5e0dc;
+            --base: #1e1e2e;
+            --text: #cdd6f4;
+        }
 
-<img class="images" src="./images/icon.png" alt="An image I thought somewhat relevant">
-<div class="textbox" style="width: 300px; height: 100px; margin: 50px;">
-<h1 id="title">Holly</h1>
-</div>
-<div class="textbox" style="width: 600px;">
-  <p>Perhaps here I should put some lengthy paragraph, or perhaps an irritating inspirational quote of some sort?<br>
-  In any case I shall have to write a few lines so that the paragraph doesn't look completely out of place.<br>
-  Maybe I should just ramble about meaningless thoughts?
-  </p>
-</div>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--base);
+            color: var(--rosewater);
+            font-family: 'Arial', sans-serif;
+            font-size: 20vw;
+            overflow: hidden;
+        }
+
+        .wink {
+            transition: color 0.3s ease;
+        }
+
+        .wink:hover::after {
+            content: ";)";
+            color: var(--rosewater);
+        }
+
+        .wink::after {
+            content: ":)";
+        }
+    </style>
+</head>
+<body>
+    <div class="wink"></div>
 </body>
 </html>
+
